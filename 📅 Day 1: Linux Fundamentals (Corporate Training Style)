@@ -1,0 +1,123 @@
+🎯 Learning Objective
+
+By the end of today, you will be able to:
+✅ Navigate Linux filesystem
+✅ Manage files & directories
+✅ View, search, and filter file content
+✅ Understand permissions and modify them
+
+
+🟢 1. Linux File System Basics
+
+Concept:
+Linux has a hierarchical directory structure. Everything starts from / (root).
+
+Most Important Directories:
+
+/home – User home directories
+
+/etc – Configuration files
+
+/var – Logs, variable data
+
+/usr – Installed software
+
+/bin, /sbin – System binaries
+
+
+Commands to Practice:
+pwd                  # Print working directory
+ls                   # List files
+ls -l                # Long listing format
+ls -a                # Show hidden files
+cd /etc              # Change directory to /etc
+cd ~                 # Go back to home directory
+
+
+
+🔵 2. File and Directory Operations
+
+Concept:
+Files are the smallest units in Linux. Directories hold files.
+
+Commands to Practice:
+touch file1.txt               # Create a file
+mkdir devops_training         # Create directory
+cp file1.txt file2.txt        # Copy file
+mv file2.txt newfile.txt      # Rename / move file
+rm newfile.txt                # Delete file
+rmdir devops_training         # Remove empty directory
+
+
+
+🟡 3. Viewing & Searching Files
+
+Concept:
+You often need to view logs or search text in large files.
+
+Commands to Practice:
+cat /etc/os-release           # View entire file
+head -5 /etc/passwd           # View first 5 lines
+tail -5 /etc/passwd           # View last 5 lines
+tail -f /var/log/syslog       # Follow log in real-time
+grep root /etc/passwd         # Search for 'root' in file
+grep -i admin /etc/passwd     # Case-insensitive search
+
+
+🔴 4. File Permissions
+
+Concept:
+Each file has permissions for:
+
+User (u) – Owner
+
+Group (g) – Group
+
+Others (o) – Everyone else
+
+Example:
+-rw-r--r-- 1 user user 123 Sep 16 file1.txt
+
+rw- → user has read, write
+
+r-- → group has read
+
+r-- → others have read
+
+Commands to Practice:
+ls -l file1.txt               # See permissions
+chmod 644 file1.txt           # Set read/write for owner, read for others
+chmod u+x file1.txt           # Add execute permission for user
+
+
+
+📝 Mini Hands-On Task
+
+Create a directory named day1_practice, then:
+
+Inside it, create a file demo.txt and write your name into it.
+
+Copy the file to backup.txt.
+
+Change its permission so that only you can read/write, nobody else can access.
+
+Search for your name inside the file using grep.
+
+Delete the backup file.
+
+
+
+🔍 Day 1 Mini-Quiz
+
+Answer these in your own words (no need to be perfect, just to check recall):
+
+What is the difference between ls and ls -l?
+
+What does chmod 755 file.sh mean?
+
+How do you check the current working directory?
+
+Which command follows logs in real time?
+
+
+
