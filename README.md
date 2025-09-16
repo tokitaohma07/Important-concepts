@@ -155,3 +155,11 @@ Role-based access control (RBAC) in Kubernetes
 
 SSL/TLS basics
 
+
+
+```Linux & Scripting  →  Git & GitHub  →  CI/CD (Jenkins)  →  
+Docker & Images  →  Kubernetes (EKS)  →  
+Terraform & Ansible (IaC)  →  
+AWS Cloud (Core Services)  →  
+Monitoring (Prometheus, Grafana, Splunk)  →  
+SRE Concepts (SLI, SLO, Incident Mgmt)
