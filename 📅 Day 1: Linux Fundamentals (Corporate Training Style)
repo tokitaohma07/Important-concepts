@@ -121,3 +121,26 @@ Which command follows logs in real time?
 
 
 
+✅ I’ve created a realistic sample log file for you:
+📂 Download sample_syslog.log
+
+🏋 Practice Tasks Using This Log File
+
+Run these commands on your Linux terminal (or WSL/Git Bash if you’re on Windows):
+# 1. See first 5 lines
+head -5 sample_syslog.log
+
+# 2. See last 5 lines
+tail -5 sample_syslog.log
+
+# 3. Follow logs in real time (simulate real-world)
+tail -f sample_syslog.log
+
+# 4. Search for all ERROR logs
+grep "ERROR" sample_syslog.log
+
+# 5. Search for logs related to payment-service
+grep "payment-service" sample_syslog.log
+
+# 6. Count how many lines have 'User login'
+grep -c "User login" sample_syslog.log
