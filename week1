@@ -1,0 +1,11 @@
+## 🟢 Week 1 – Foundations (Linux + Git)
+
+| Day | Focus              | Tasks                                                                                |
+| --- | ------------------ | ------------------------------------------------------------------------------------ |
+| 1   | Linux Basics       | Commands: `ls`, `cd`, `pwd`, `cat`, `grep`, `find`, `head`, `tail`, `chmod`, `chown` |
+| 2   | Linux Process Mgmt | `ps`, `top`, `kill`, `systemctl`, `journalctl`, log reading                          |
+| 3   | Shell Scripting    | Variables, loops, functions, cron job setup                                          |
+| 4   | Git Basics         | `clone`, `add`, `commit`, `push`, `pull`, `merge`                                    |
+| 5   | Git Branching      | Feature branches, resolving conflicts, `rebase`                                      |
+| 6   | GitHub             | Creating repos, webhooks, PRs                                                        |
+| 7   | Weekly Review      | Mini-project: Automate log cleanup script + push to GitHub                           |
