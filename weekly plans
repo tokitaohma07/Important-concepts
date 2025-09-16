@@ -1,0 +1,51 @@
+## 🟢 Week 1 – Foundations (Linux + Git)
+| Day | Focus              | Tasks                                                                                |
+| --- | ------------------ | ------------------------------------------------------------------------------------ |
+| 1   | Linux Basics       | Commands: `ls`, `cd`, `pwd`, `cat`, `grep`, `find`, `head`, `tail`, `chmod`, `chown` |
+| 2   | Linux Process Mgmt | `ps`, `top`, `kill`, `systemctl`, `journalctl`, log reading                          |
+| 3   | Shell Scripting    | Variables, loops, functions, cron job setup                                          |
+| 4   | Git Basics         | `clone`, `add`, `commit`, `push`, `pull`, `merge`                                    |
+| 5   | Git Branching      | Feature branches, resolving conflicts, `rebase`                                      |
+| 6   | GitHub             | Creating repos, webhooks, PRs                                                        |
+| 7   | Weekly Review      | Mini-project: Automate log cleanup script + push to GitHub                           |
+
+
+
+## 🔵 Week 2 – CI/CD + Docker
+| Day | Focus          | Tasks                                         |
+| --- | -------------- | --------------------------------------------- |
+| 8   | Jenkins Setup  | Install Jenkins locally or on EC2             |
+| 9   | Freestyle Jobs | Build & deploy a sample app manually          |
+| 10  | Pipeline Jobs  | Write simple `Jenkinsfile`, add stages        |
+| 11  | Docker Basics  | `docker build`, `run`, `exec`, `logs`         |
+| 12  | Dockerfiles    | Write multi-stage Dockerfile for a sample app |
+| 13  | Docker Compose | Local multi-container setup                   |
+| 14  | Weekly Review  | Build & push Docker image to DockerHub/ECR    |
+
+
+
+## 🟡 Week 3 – Kubernetes + AWS
+| Day | Focus                 | Tasks                                               |
+| --- | --------------------- | --------------------------------------------------- |
+| 15  | Kubernetes Basics     | Pods, ReplicaSets, Deployments                      |
+| 16  | Services & Config     | Services (ClusterIP, NodePort), ConfigMaps, Secrets |
+| 17  | Scaling & Rollouts    | HPA, rolling updates, rollbacks                     |
+| 18  | Helm Charts           | Deploy app with Helm                                |
+| 19  | AWS Compute & Storage | EC2, S3, IAM basics                                 |
+| 20  | AWS Networking        | VPC, Security Groups, Load Balancer                 |
+| 21  | Weekly Review         | Deploy sample app to AWS EKS                        |
+
+
+
+## 🔴 Week 4 – IaC + Monitoring + SRE
+| Day | Focus               | Tasks                                                   |
+| --- | ------------------- | ------------------------------------------------------- |
+| 22  | Terraform Basics    | `init`, `plan`, `apply`, create EC2                     |
+| 23  | Terraform Advanced  | Variables, outputs, modules                             |
+| 24  | Ansible             | Playbooks, ad-hoc commands, roles                       |
+| 25  | Prometheus          | Setup & scrape sample metrics                           |
+| 26  | Grafana             | Create dashboard & alert                                |
+| 27  | Splunk / CloudWatch | Search queries, create alerts                           |
+| 28  | SRE Concepts        | SLIs, SLOs, SLAs, Incident response                     |
+| 29  | Final Mini-Project  | Automate build → push image → deploy to EKS via Jenkins |
+| 30  | Mock Interview Day  | Practice top 20 DevOps & SRE interview questions        |
