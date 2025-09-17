@@ -57,3 +57,105 @@ Find which partition is using the most disk space (df -h)
 Check if memory is available (free -h)
 
 
+
+🟡 3. Basic Shell Scripting
+
+Concept:
+Shell scripts automate repetitive tasks.
+
+Sample Script:
+Create a file cleanup.sh:
+#!/bin/bash
+# Cleanup old log files
+echo "Starting cleanup job..."
+LOG_DIR="/var/log"
+find $LOG_DIR -type f -name "*.log" -mtime +7 -exec rm -f {} \;
+echo "Cleanup complete!"
+
+
+Run the script:
+chmod +x cleanup.sh
+./cleanup.sh
+
+
+
+📝 Mini Hands-On Task
+
+Write a script system_health.sh that:
+
+Prints date & time
+
+Shows CPU and memory usage (uptime, free -h)
+
+Shows top 3 processes consuming most CPU (ps aux --sort=-%cpu | head -4)
+
+Make it executable and run it.
+
+
+
+ANS:-
+
+1. Create the script file
+
+Open a terminal and run:
+nano system_health.sh
+
+
+#!/bin/bash
+# system_health.sh - Simple system health check
+
+echo "===== System Health Report ====="
+echo "Date & Time: $(date)"
+echo
+
+echo "---- Uptime / Load ----"
+uptime
+echo
+
+echo "---- Memory Usage ----"
+free -h
+echo
+
+echo "---- Top 3 CPU-consuming processes ----"
+# 'head -4' includes the header + top 3 processes
+ps aux --sort=-%cpu | head -4
+echo "======================================"
+
+
+2. Make it executable
+chmod +x system_health.sh
+
+./system_health.sh
+
+
+✅ Output you’ll see (example):
+===== System Health Report =====
+Date & Time: Tue Sep 17 15:05:14 UTC 2025
+
+---- Uptime / Load ----
+ 15:05:14 up 3 days,  4:23,  2 users,  load average: 0.23, 0.30, 0.25
+
+---- Memory Usage ----
+              total        used        free      shared  buff/cache   available
+Mem:           15Gi       3.1Gi       8.4Gi       275Mi       3.7Gi        11Gi
+Swap:         2.0Gi          0B       2.0Gi
+
+---- Top 3 CPU-consuming processes ----
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root      1234 12.0  0.7 345678  8765 ?        Ssl  12:00   0:25 some_process
+user      2345  8.3  0.5 234567  6543 ?        Sl   12:15   0:17 another_process
+user      3456  5.1  1.2 456789 12345 ?        Sl   12:30   0:10 yet_another
+======================================
+
+
+🔍 Day 2 Mini-Quiz
+
+What is the difference between kill and kill -9?
+
+Which command shows CPU usage per process interactively?
+
+How do you make a script executable?
+
+What does this command do?
+
+find /var/log -type f -mtime +5
