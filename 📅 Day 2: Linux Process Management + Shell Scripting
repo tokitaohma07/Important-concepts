@@ -1,0 +1,59 @@
+🎯 Learning Objectives
+
+By the end of today, you will be able to:
+✅ View and manage running processes
+✅ Monitor CPU, memory, and disk usage
+✅ Write simple shell scripts for automation
+
+
+
+🟢 1. Process Management
+
+Concept:
+A process is a running program. You need to know how to find and control them.
+
+Key Commands:
+ps aux                 # Show all running processes
+ps -ef                # Another format for process list
+top                   # Interactive process monitor
+htop                  # (if installed) Colorful top with sorting
+kill <PID>            # Kill a process by its PID
+kill -9 <PID>         # Force kill a process
+jobs                  # Show background jobs
+fg %1                 # Bring job 1 to foreground
+bg %1                 # Resume job 1 in background
+
+
+
+Practice:
+
+Open one terminal, run ping google.com (it will run continuously)
+
+In another terminal, use ps aux | grep ping to find its PID
+
+Kill it using kill <PID>
+
+
+
+🔵 2. System Monitoring
+
+Concept:
+You need to check system health during incidents.
+
+Key Commands:
+free -h               # Check memory usage
+df -h                 # Check disk space
+uptime                # See load average
+who                  # See logged-in users
+uptime -p            # System uptime in human-readable format
+iostat (if installed) # CPU/IO usage stats
+
+
+
+Practice:
+
+Find which partition is using the most disk space (df -h)
+
+Check if memory is available (free -h)
+
+
