@@ -20,4 +20,8 @@ read NAME
 echo "Hello $NAME, welcome to Day 3 training!"
 
 
-
+Run:
+```
+chmod +x greet.sh
+./greet.sh
+```
