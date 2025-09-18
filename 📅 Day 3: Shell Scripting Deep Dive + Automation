@@ -1,0 +1,23 @@
+🎯 Learning Objectives
+
+By the end of today, you will be able to:
+✅ Write scripts with variables, loops, and conditions
+✅ Accept user input and process it
+✅ Automate script execution with cron jobs
+
+
+
+🟢 1. Variables and User Input
+
+Concept:
+Variables make scripts dynamic. User input makes scripts interactive.
+
+Example:
+#!/bin/bash
+# greet.sh
+echo "Enter your name:"
+read NAME
+echo "Hello $NAME, welcome to Day 3 training!"
+
+
+
