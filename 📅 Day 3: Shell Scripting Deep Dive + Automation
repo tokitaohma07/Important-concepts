@@ -13,15 +13,120 @@ Concept:
 Variables make scripts dynamic. User input makes scripts interactive.
 
 Example:
+----------
 #!/bin/bash
 # greet.sh
 echo "Enter your name:"
 read NAME
 echo "Hello $NAME, welcome to Day 3 training!"
-
+----------
 
 Run:
-```
+----------
 chmod +x greet.sh
 ./greet.sh
+----------
+
+
+
+🔵 2. Conditionals (if-else)
+
+Concept:
+Decision-making in scripts.
+
+Example:
+----------
+#!/bin/bash
+# check_disk.sh
+USAGE=$(df / | grep / | awk '{print $5}' | sed 's/%//')
+if [ $USAGE -gt 80 ]; then
+  echo "CRITICAL: Disk usage is above 80%! ($USAGE%)"
+else
+  echo "Disk usage is normal ($USAGE%)"
+fi
+----------
+
+
+
+🟡 3. Loops
+
+Concept:
+Run the same task multiple times.
+
+Example:
+----------
+#!/bin/bash
+# ping_servers.sh
+SERVERS=("google.com" "github.com" "amazon.com")
+for s in "${SERVERS[@]}"
+do
+  ping -c 1 $s > /dev/null
+  if [ $? -eq 0 ]; then
+    echo "$s is reachable"
+  else
+    echo "$s is DOWN"
+  fi
+done
+----------
+
+
+
+🔴 4. Cron Jobs
+
+Concept:
+Cron is used to schedule jobs (just like Jenkins but at OS level).
+
+Syntax:
+* * * * * command_to_run
+(Minute Hour Day Month DayOfWeek)
+
+Example:
+Run check_disk.sh every 5 minutes:
 ```
+crontab -e
+# Add this line:
+*/5 * * * * /home/ubuntu/check_disk.sh >> /home/ubuntu/disk_log.txt
+```
+
+
+📝 Mini Hands-On Task
+
+Write a script backup_home.sh that:
+
+Creates a tar archive of your home directory.
+
+Saves it in /tmp/backup_<date>.tar.gz.
+
+Test the script manually.
+
+Schedule it with cron to run every day at 2 AM.
+
+Check logs to ensure it runs properly.
+
+
+ANS:-
+
+🔹 1. Write the script backup_home.sh
+```
+#!/bin/bash
+# backup_home.sh - Backup home directory to /tmp
+
+# Set variables
+DATE=$(date +%F)                # Current date (YYYY-MM-DD)
+BACKUP_FILE="/tmp/backup_$DATE.tar.gz"
+
+# Create tar archive
+tar -czf $BACKUP_FILE /home/$USER
+
+# Print result
+echo "Backup completed: $BACKUP_FILE"
+```
+
+🔹 2. Make it executable
+```
+chmod +x backup_home.sh
+```
+
+
+
+
