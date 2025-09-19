@@ -112,11 +112,11 @@ ANS:-
 # backup_home.sh - Backup home directory to /tmp
 
 # Set variables
-DATE=$(date +%F)                # Current date (YYYY-MM-DD)
+DATE=$(date +%F_%H-%M-%S)              # Current date (YYYY-MM-DD)
 BACKUP_FILE="/tmp/backup_$DATE.tar.gz"
 
 # Create tar archive
-tar -czf $BACKUP_FILE /home/$USER
+tar -czf "$BACKUP_FILE" "$HOME"
 
 # Print result
 echo "Backup completed: $BACKUP_FILE"
@@ -128,5 +128,33 @@ chmod +x backup_home.sh
 ```
 
 
+🔍 Day 3 Mini-Quiz
+
+1. What is the difference between $VAR and ${VAR} in shell?
+
+VAR="hello"
+echo "$VARworld"    # ERROR: shell looks for variable VARworld
+echo "${VAR}world"  # Correct: expands to helloworld
+
+
+2. What does if [ $? -eq 0 ] check for?
+
+$? = exit status of the last command.
+
+0 means success, non-zero means failure.
+
+    if [ $? -eq 0 ]; then
+       echo "Previous command succeeded"
+    else
+       echo "Previous command failed"
+    fi
+
+
+3. How do you list all cron jobs for the current user?
+crontab -l
+
+
+4. Write a one-liner to print numbers from 1 to 5 in a loop.
+for i in {1..5}; do echo $i; done
 
 
